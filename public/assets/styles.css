@@ -1,0 +1,151 @@
+body{
+    background: url(bk.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+}
+
+.login-1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border: 3px solid rgb(241, 241, 241);
+    border-radius: 12px;
+    padding: 1opx 20px;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.login-1 h2{
+    font-size: 30px;
+    color: #fffefe;
+
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="password"] {
+    border-radius: 10px;
+    background: transparent;
+    margin: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 320px;
+    height: 28px;
+    padding: 20px 40px 20px 20px;
+    backdrop-filter: blur(15px);
+    background-color: #fff;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    color: rgb(11, 7, 7);
+}
+
+input::placeholder {
+    color: rgb(6, 8, 10);
+}
+
+.input-field input[type="text"]:focus input::placeholder,
+.input-field input[type="email"]:focus input::placeholder,
+.input-field input[type="password"]:focus input::placeholder {
+
+    transform: translateY(-100%);
+    transition: tranform 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.input-field input[type="text"]:not(:focus)::placeholder,
+.input-field input[type="email"]:not(:focus)::placeholder,
+.input-field input[type="password"]:not(:focus)::placeholder {
+
+    transform: translateY(0%);
+    transition: tranform 0.2s ease-in-out;
+    font-size: 16px;
+}
+
+a.forget {
+    text-decoration: none;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+a.forget:hover {
+    text-decoration: underline;
+    color: #fffffffd;
+}
+ a.sign-up {
+    text-decoration: none;
+    position: relative;
+    color: #fffffff8;
+ }
+
+ a.sign-up:hover {
+    text-decoration: underline;
+    color: hsl(252, 95%, 50%);
+ }
+
+ .login {
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600px;
+    border-radius: 45px;
+    width: 200px;
+    height: 30px;
+ }
+
+ .login:hover {
+    background-color: #010693; 
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+    transform: rotateZ('-7px');
+ }
+
+ 
+
+ .signup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    border: 3px solid rgb(241, 241, 241);
+    border-radius: 12px;
+    padding: 1opx 20px;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.signup h2{
+    font-size: 30px;
+    color: #fffefe;
+
+}
+
+a.login2 {
+    font-size: 20px;
+    text-decoration: underline;
+    color: hsl(252, 95%, 50%);
+ }
+
+ a.login2:hover {
+    text-decoration: underline;
+    color: hwb(129 4% 23% / 0.992);
+ }
