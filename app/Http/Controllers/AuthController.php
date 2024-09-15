@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    //............................................Login...................................//
     public function login(Request $request){
         
         $request->validate([
@@ -22,7 +23,7 @@ class AuthController extends Controller
         if($user){
             if (Hash::check($request->password, $user->password)) {
                 Auth::login($user);
-                return redirect()->route('users.index');
+                return redirect()->route('test');
             }
             $request->session()->flash('error', 'Check your email and passowrd');
             return redirect()->back();
@@ -32,7 +33,7 @@ class AuthController extends Controller
         $request->session()->flash('error', 'Check your email and passowrd');
         return redirect()->back();
     }
-
+//....................................................Register........................................//
     public function register(Request $request){
 
         $request->validate([
@@ -51,8 +52,6 @@ class AuthController extends Controller
         User::insert($data);
         $request->session()->flash('success', 'Created Successfully');
         return redirect()->route('login');
-
-
 
     }
 }

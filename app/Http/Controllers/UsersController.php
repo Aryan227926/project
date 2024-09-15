@@ -15,7 +15,8 @@ class UsersController extends Controller
    public function create(){
         return view('users.create');
    }
-   
+
+//..................................Store...............................................//
 
    public function store( Request $request){
 
@@ -30,6 +31,7 @@ class UsersController extends Controller
     User::insert($data);
     return redirect()->route('users.index');
    }
+//.......................................Delete.......................................//
 
    public function delete($id){
 
@@ -45,6 +47,7 @@ class UsersController extends Controller
 
      return redirect()->back();
    }
+//.............................................Edit..............................//
 
    public function edit($id){
 
@@ -60,14 +63,12 @@ class UsersController extends Controller
 
      return redirect()->back();
    }
+//..............................................Update..............................//
 
-   public function update( Request $request, $id){
-     
+   public function update( Request $request, $id){  
      if(!$id){
           return redirect()->back();
      }
-
-     
      $user = User::find($id);
      if($user){
           $data = [
@@ -75,7 +76,7 @@ class UsersController extends Controller
                'email' => $request->get('email'),
                'password' => $request->get('password')
              ];
-         
+
              User::where('id',$id)->update($data);
              return redirect()->route('users.index');
      }
